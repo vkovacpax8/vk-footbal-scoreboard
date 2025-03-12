@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Match {
     private final String homeTeam;
     private final String awayTeam;
-    //The Match class uses AtomicInteger for the homeScore and awayScore. This allows safe increment and read operations without the need for synchronization. You can update scores concurrently without running into race conditions.
+    //AtomicInteger allows safe increment and read operations without the need for synchronization.
     private final AtomicInteger homeScore = new AtomicInteger(0);
     private final AtomicInteger awayScore = new AtomicInteger(0);
     private final LocalDateTime startTime;
